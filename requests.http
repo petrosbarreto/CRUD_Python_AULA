@@ -1,0 +1,30 @@
+### Health check
+GET http://127.0.0.1:8000/
+
+### Listar tasks
+GET http://127.0.0.1:8000/tasks
+
+### Criar task
+POST http://127.0.0.1:8000/tasks
+Content-Type: application/json
+
+{
+  "title": "Estudar FastAPI",
+  "description": "Revisar CRUD",
+  "done": false
+}
+
+### Buscar task por ID
+GET http://127.0.0.1:8000/tasks/1
+
+### Atualizar task
+PUT http://127.0.0.1:8000/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Estudar FastAPI e Pydantic",
+  "done": true
+}
+
+### Deletar task
+DELETE http://127.0.0.1:8000/tasks/1
