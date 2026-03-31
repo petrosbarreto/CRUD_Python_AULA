@@ -28,3 +28,21 @@ Content-Type: application/json
 
 ### Deletar task
 DELETE http://127.0.0.1:8000/tasks/1
+
+### Aula - resumo teórico de repetição
+GET http://127.0.0.1:8000/aula/repeticao/teoria
+
+### Aula - exemplos gerais de repetição
+GET http://127.0.0.1:8000/aula/repeticao/exemplos
+
+### Aula - while
+GET http://127.0.0.1:8000/aula/repeticao/while?limite=6&n_soma=10
+
+### Aula - for e range
+GET http://127.0.0.1:8000/aula/repeticao/for?inicio=1&fim=5&numero_tabuada=8
+
+### Aula - loops aninhados e controle de fluxo
+GET http://127.0.0.1:8000/aula/repeticao/controle-fluxo
+
+### Aula - lista de exercícios para PR
+GET http://127.0.0.1:8000/aula/repeticao/exercicios
