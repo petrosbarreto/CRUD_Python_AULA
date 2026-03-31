@@ -160,13 +160,34 @@ def exemplo_break_continue(valores: list[int]) -> dict[str, list[int] | int]:
 def ex1_contar_pares_while(inicio: int, fim: int) -> int:
     """Exercício 1: contar quantos números pares existem entre inicio e fim."""
     # TODO: implementar com while.
-    raise NotImplementedError("Implemente o Exercício 1")
+
+    contador = 0
+    num = inicio
+
+    while num <= fim:
+        
+        if num % 2 == 0:
+            contador += 1
+
+        num += 1
+
+    return contador
+
+
 
 
 def ex2_somar_impares_for(inicio: int, fim: int) -> int:
     """Exercício 2: somar os números ímpares entre inicio e fim."""
     # TODO: implementar com for e range.
-    raise NotImplementedError("Implemente o Exercício 2")
+    
+    soma = 0
+
+    for num in range(inicio, fim + 1):
+
+        if num % 2 != 0:
+            soma += num
+
+    return soma
 
 
 def ex3_login_tentativas_while(senha_correta: str, tentativas: list[str]) -> bool:
@@ -178,7 +199,18 @@ def ex3_login_tentativas_while(senha_correta: str, tentativas: list[str]) -> boo
     - Retornar False caso contrário
     """
     # TODO: implementar.
-    raise NotImplementedError("Implemente o Exercício 3")
+
+    contador = 0
+
+    while contador < 3 and contador < len(tentativas):
+        if tentativas[contador] == senha_correta:
+            return True
+        
+        contador += 1
+    
+    return False
+        
+
 
 
 def ex4_condicional_repeticao_fizzbuzz(n: int) -> list[str]:
@@ -191,7 +223,25 @@ def ex4_condicional_repeticao_fizzbuzz(n: int) -> list[str]:
     - caso contrário: o próprio número em string
     """
     # TODO: implementar.
-    raise NotImplementedError("Implemente o Exercício 4")
+    
+    resultado = []
+
+    for numero in range(1, n + 1):
+
+        if numero % 3 == 0 and numero % 5 == 0:
+            resultado.append("FizzBuzz")
+
+        elif numero % 3 == 0:
+            resultado.append("Fizz")
+
+        elif numero % 5 == 0:
+            resultado.append("Buzz")
+
+        else:
+            resultado.append(str(numero))
+
+    return resultado
+
 
 
 def ex5_media_aprovacao(notas: list[float]) -> dict[str, float | str]:
@@ -205,7 +255,27 @@ def ex5_media_aprovacao(notas: list[float]) -> dict[str, float | str]:
     Dica: usar laço para somar as notas e condicional para status.
     """
     # TODO: implementar.
-    raise NotImplementedError("Implemente o Exercício 5")
+    soma = 0
+
+    for nota in notas:
+        soma += nota
+
+    media = soma / len(notas)
+
+    if media >= 7:
+        status = "Aprovado"
+    
+    elif media >= 5:
+        status = "Recuperação"
+    
+    else:
+        status = "Reprovado"
+
+    return {
+        "media": media,
+        "status": status
+}
+    
 
 
 def executar_demos() -> dict[str, object]:
