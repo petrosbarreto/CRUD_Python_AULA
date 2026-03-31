@@ -1,3 +1,5 @@
+petros passou aqui 2 com owner UNIFG
+
 # CRUD de Tasks com FastAPI
 
 API simples de CRUD para cadastro de tasks, feita em Python com FastAPI.
